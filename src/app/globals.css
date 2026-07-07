@@ -167,6 +167,7 @@ code, pre, .mono {
   background: var(--structural-dark);
   border: 1px solid var(--blueprint);
   border-radius: 12px;
+  cursor: pointer !important;
   transition: border-color var(--duration-normal) var(--ease-smooth),
               box-shadow var(--duration-normal) var(--ease-smooth),
               transform var(--duration-normal) var(--ease-smooth);
