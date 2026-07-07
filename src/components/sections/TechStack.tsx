@@ -163,21 +163,6 @@ export default function TechStack() {
             <StackCategory key={cat.id} category={cat} index={i} inView={inView} />
           ))}
         </div>
-
-        {/* Bottom monospace tagline */}
-        <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: prefersReducedMotion ? 0 : 0.5, delay: 0.7, ease }}
-        >
-          <p
-            className="text-xs"
-            style={{ color: 'rgba(136,153,170,0.5)', fontFamily: 'var(--font-mono)', letterSpacing: '0.08em' }}
-          >
-            const team = &#123; fullStack: ✓, ml: ✓, realTime: ✓, available: ✓ &#125;;
-          </p>
-        </motion.div>
       </div>
     </section>
   );
