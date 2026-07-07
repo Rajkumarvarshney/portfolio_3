@@ -33,16 +33,22 @@
   box-sizing: border-box;
 }
 
-/* Pointer cursor on all interactive elements */
+/* Pointer cursor on ALL interactive elements — !important overrides Tailwind base reset */
 a,
 button,
 select,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
 label[for],
 [role="button"],
 [role="tab"],
-[role="listitem"][tabindex],
-[tabindex="0"] {
-  cursor: pointer;
+[role="link"],
+[tabindex="0"],
+[tabindex]:not([tabindex="-1"]) {
+  cursor: pointer !important;
 }
 
 html {
