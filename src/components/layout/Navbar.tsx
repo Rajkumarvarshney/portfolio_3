@@ -39,7 +39,14 @@ export default function Navbar() {
     const scrollToSection = () => {
       const el = document.querySelector(href);
       if (el) {
-        el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+        const navbarOffset = 80; // 64px navbar + 16px padding
+        const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - navbarOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        });
       }
     };
 

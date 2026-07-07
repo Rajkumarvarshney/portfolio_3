@@ -186,7 +186,16 @@ export default function Hero() {
 
   const scrollToSection = (id: string) => {
     const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    if (el) {
+      const navbarOffset = 80;
+      const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - navbarOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: prefersReducedMotion ? 'auto' : 'smooth',
+      });
+    }
   };
 
   const ease = [0.16, 1, 0.3, 1] as const;
