@@ -30,31 +30,29 @@ export default function Footer() {
         }}
       />
 
-      <div className="container py-12">
-        {/* 3-column grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+      <div className="container" style={{ paddingTop: '3rem', paddingBottom: '2rem' }}>
 
-          {/* ── Brand ──────────────────────────────── */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            {/* Logo */}
-            <div className="flex items-center gap-2.5 mb-4">
+        {/* Main 3-col grid — driven by .footer-grid in globals.css */}
+        <div className="footer-grid" style={{ marginBottom: '2.5rem' }}>
+
+          {/* ── Brand ── */}
+          <div className="footer-brand">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
               <div
-                className="w-8 h-8 rounded-md flex items-center justify-center text-xs font-bold flex-shrink-0"
                 style={{
+                  width: '2rem', height: '2rem', borderRadius: '6px',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  fontSize: '0.7rem', fontWeight: 700, flexShrink: 0,
                   background: 'linear-gradient(135deg, var(--parsed-teal), #5DDED5)',
-                  color: 'var(--forge-black)',
-                  fontFamily: 'var(--font-mono)',
+                  color: 'var(--forge-black)', fontFamily: 'var(--font-mono)',
                 }}
               >
                 TF
               </div>
               <span
-                className="text-lg font-bold"
                 style={{
-                  fontFamily: 'var(--font-display)',
-                  color: 'var(--ghost-white)',
-                  lineHeight: 1.4,
-                  overflow: 'visible',
+                  fontFamily: 'var(--font-display)', color: 'var(--ghost-white)',
+                  fontSize: '1.1rem', fontWeight: 700, lineHeight: 1.4, overflow: 'visible',
                 }}
               >
                 TrioForge
@@ -62,47 +60,52 @@ export default function Footer() {
             </div>
 
             <p
-              className="text-sm leading-relaxed mb-5"
-              style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)', maxWidth: '22rem' }}
+              style={{
+                color: 'var(--muted)', fontFamily: 'var(--font-body)',
+                fontSize: '0.875rem', lineHeight: 1.7,
+                maxWidth: '22rem', marginBottom: '1.25rem',
+              }}
             >
               Three engineers. One forge. We turn complex requirements into
-              structured, fast-running software — from ML pipelines to
-              real-time apps.
+              structured, fast-running software — from ML pipelines to real-time apps.
             </p>
 
             <span
-              className="inline-block text-xs px-3 py-1 rounded-full"
               style={{
-                fontFamily: 'var(--font-mono)',
+                display: 'inline-block', fontFamily: 'var(--font-mono)',
+                fontSize: '0.68rem', padding: '0.3rem 0.75rem', borderRadius: '999px',
                 background: 'rgba(78,205,196,0.08)',
                 border: '1px solid rgba(78,205,196,0.25)',
-                color: 'var(--parsed-teal)',
-                letterSpacing: '0.04em',
+                color: 'var(--parsed-teal)', letterSpacing: '0.04em',
               }}
             >
               Available for freelance &amp; contract
             </span>
           </div>
 
-          {/* ── Quick Links ────────────────────────── */}
+          {/* ── Quick Links ── */}
           <div>
             <h3
-              className="text-xs font-semibold uppercase mb-4"
               style={{
-                fontFamily: 'var(--font-mono)',
-                color: 'var(--ghost-white)',
-                letterSpacing: '0.12em',
+                fontFamily: 'var(--font-mono)', fontSize: '0.7rem', fontWeight: 600,
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                color: 'var(--ghost-white)', marginBottom: '1rem',
               }}
             >
               Quick Links
             </h3>
-            <ul className="flex flex-col gap-2.5" role="list">
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.65rem' }} role="list">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm transition-colors duration-150 hover:text-[var(--parsed-teal)]"
-                    style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)' }}
+                    style={{
+                      color: 'var(--muted)', fontFamily: 'var(--font-body)',
+                      fontSize: '0.875rem', textDecoration: 'none',
+                      transition: 'color 150ms',
+                    }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = 'var(--parsed-teal)'; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = 'var(--muted)'; }}
                   >
                     {link.label}
                   </a>
@@ -111,38 +114,37 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* ── Get in Touch ───────────────────────── */}
+          {/* ── Get in Touch ── */}
           <div>
             <h3
-              className="text-xs font-semibold uppercase mb-4"
               style={{
-                fontFamily: 'var(--font-mono)',
-                color: 'var(--ghost-white)',
-                letterSpacing: '0.12em',
+                fontFamily: 'var(--font-mono)', fontSize: '0.7rem', fontWeight: 600,
+                letterSpacing: '0.14em', textTransform: 'uppercase',
+                color: 'var(--ghost-white)', marginBottom: '1rem',
               }}
             >
               Get in Touch
             </h3>
-            <div className="flex flex-col gap-3">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.9rem' }}>
               {[
-                { label: 'Rajkumar', email: 'raj1511aryan@gmail.com', dot: 'var(--parsed-teal)' },
-                { label: 'Yash', email: 'yashgarg7302@gmail.com', dot: 'var(--forge-amber)' },
-                { label: 'Aditya', email: 'aditya.mehra.dummy@email.com', dot: '#7B8FF7' },
-              ].map(({ label, email, dot }) => (
+                { name: 'Rajkumar', email: 'raj1511aryan@gmail.com', color: '#4ECDC4' },
+                { name: 'Yash', email: 'yashgarg7302@gmail.com', color: '#FF9B3C' },
+                { name: 'Aditya', email: 'aditya.mehra.dummy@email.com', color: '#7B8FF7' },
+              ].map(({ name, email, color }) => (
                 <div key={email}>
-                  <p
-                    className="text-xs mb-0.5"
-                    style={{ color: dot, fontFamily: 'var(--font-mono)', opacity: 0.85 }}
-                  >
-                    {label}
+                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color, marginBottom: '0.2rem', opacity: 0.9 }}>
+                    {name}
                   </p>
                   <a
                     href={`mailto:${email}`}
-                    className="text-xs break-all transition-colors duration-150"
-                    style={{ color: 'var(--muted)', fontFamily: 'var(--font-mono)' }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = dot; }}
+                    style={{
+                      fontFamily: 'var(--font-mono)', fontSize: '0.75rem',
+                      color: 'var(--muted)', textDecoration: 'none',
+                      wordBreak: 'break-all', transition: 'color 150ms',
+                    }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = color; }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = 'var(--muted)'; }}
-                    aria-label={`Email ${label}: ${email}`}
+                    aria-label={`Email ${name}`}
                   >
                     {email}
                   </a>
@@ -152,15 +154,18 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ── Bottom bar ─────────────────────────── */}
+        {/* ── Bottom bar ── */}
         <div
-          className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-6 text-xs"
-          style={{ borderTop: '1px solid rgba(42,63,95,0.4)' }}
+          style={{
+            display: 'flex', flexWrap: 'wrap', alignItems: 'center',
+            justifyContent: 'space-between', gap: '0.75rem',
+            paddingTop: '1.5rem', borderTop: '1px solid rgba(42,63,95,0.4)',
+          }}
         >
-          <p style={{ fontFamily: 'var(--font-mono)', color: 'var(--muted)' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--muted)', margin: 0 }}>
             © {year} TrioForge. Built with Next.js + Framer Motion.
           </p>
-          <p style={{ fontFamily: 'var(--font-mono)', color: 'rgba(78,205,196,0.5)' }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'rgba(78,205,196,0.5)', margin: 0 }}>
             Documents in → Structured JSON out
           </p>
         </div>

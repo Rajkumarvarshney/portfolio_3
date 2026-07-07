@@ -33,10 +33,22 @@ export default function Navbar() {
   }, []);
 
   const handleNavClick = (href: string) => {
+    const wasOpen = mobileOpen;
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) {
-      el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+
+    const scrollToSection = () => {
+      const el = document.querySelector(href);
+      if (el) {
+        el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+      }
+    };
+
+    // On mobile the menu takes ~300ms to animate closed.
+    // Delay the scroll so the menu is fully gone before we jump.
+    if (wasOpen) {
+      setTimeout(scrollToSection, 350);
+    } else {
+      scrollToSection();
     }
   };
 
