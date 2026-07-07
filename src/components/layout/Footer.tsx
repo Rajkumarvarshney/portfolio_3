@@ -5,7 +5,14 @@ const quickLinks = [
   { label: 'Team', href: '#team' },
   { label: 'DocuFlow', href: '#docuflow' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Stack', href: '#stack' },
   { label: 'Contact', href: '#contact' },
+];
+
+const emails = [
+  { name: 'Rajkumar', email: 'raj1511aryan@gmail.com', color: '#4ECDC4' },
+  { name: 'Yash', email: 'yashgarg7302@gmail.com', color: '#FF9B3C' },
+  { name: 'Aditya', email: 'aditya.mehra.dummy@email.com', color: '#7B8FF7' },
 ];
 
 export default function Footer() {
@@ -13,127 +20,266 @@ export default function Footer() {
 
   return (
     <footer
-      className="border-t"
-      style={{
-        borderColor: 'rgba(42, 63, 95, 0.4)',
-        background: 'var(--structural-dark)',
-      }}
       role="contentinfo"
+      style={{
+        background: 'var(--structural-dark)',
+        borderTop: '1px solid rgba(42, 63, 95, 0.5)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+      {/* Top teal glow accent */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: '60%',
+          height: '1px',
+          background: 'linear-gradient(90deg, transparent, var(--parsed-teal), transparent)',
+          opacity: 0.6,
+        }}
+      />
+
+      <div className="container" style={{ paddingTop: '3rem', paddingBottom: '2rem' }}>
+        {/* Main grid — brand takes 2fr, links and contact each 1fr */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(1, 1fr)',
+            gap: '2.5rem',
+            marginBottom: '2.5rem',
+          }}
+          className="footer-grid"
+        >
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
               <div
-                className="w-8 h-8 rounded-md flex items-center justify-center text-xs font-bold"
                 style={{
+                  width: '2rem',
+                  height: '2rem',
+                  borderRadius: '6px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
                   background: 'linear-gradient(135deg, var(--parsed-teal), #5DDED5)',
                   color: 'var(--forge-black)',
                   fontFamily: 'var(--font-mono)',
+                  flexShrink: 0,
                 }}
               >
                 TF
               </div>
               <span
-                className="text-lg font-bold"
-                style={{ fontFamily: 'var(--font-display)', color: 'var(--ghost-white)', lineHeight: 1.4, overflow: 'visible', paddingBottom: '0.1em' }}
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  color: 'var(--ghost-white)',
+                  fontSize: '1.1rem',
+                  fontWeight: 700,
+                  lineHeight: 1.4,
+                  overflow: 'visible',
+                }}
               >
                 TrioForge
               </span>
             </div>
+
             <p
-              className="text-sm leading-relaxed max-w-xs"
-              style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)' }}
+              style={{
+                color: 'var(--muted)',
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.875rem',
+                lineHeight: 1.7,
+                maxWidth: '22rem',
+                marginBottom: '1.25rem',
+              }}
             >
-              Three engineers. One forge. We turn complex requirements into structured, 
-              fast-running software — from ML pipelines to real-time apps.
+              Three engineers. One forge. We turn complex requirements into
+              structured, fast-running software — from ML pipelines to
+              real-time apps.
             </p>
+
+            {/* Tagline badge */}
+            <span
+              style={{
+                display: 'inline-block',
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.68rem',
+                padding: '0.3rem 0.75rem',
+                borderRadius: '999px',
+                background: 'rgba(78, 205, 196, 0.08)',
+                border: '1px solid rgba(78, 205, 196, 0.25)',
+                color: 'var(--parsed-teal)',
+                letterSpacing: '0.04em',
+              }}
+            >
+              Available for freelance &amp; contract
+            </span>
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col md:items-center">
-            <div className="flex flex-col items-start">
-              <h3
-                className="text-sm font-semibold mb-4 uppercase tracking-wider"
-                style={{ color: 'var(--ghost-white)', fontFamily: 'var(--font-mono)', letterSpacing: '0.12em' }}
-              >
-                Quick Links
-              </h3>
-              <ul className="flex flex-col gap-2" role="list">
-                {quickLinks.map((link) => (
-                  <li key={link.href}>
-                    <a
-                      href={link.href}
-                      className="text-sm transition-colors"
-                      style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)' }}
-                      onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.color = 'var(--parsed-teal)';
-                      }}
-                      onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.color = 'var(--muted)';
-                      }}
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div>
+            <h3
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.7rem',
+                fontWeight: 600,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--ghost-white)',
+                marginBottom: '1.1rem',
+              }}
+            >
+              Quick Links
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.6rem' }} role="list">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      color: 'var(--muted)',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.875rem',
+                      textDecoration: 'none',
+                      transition: 'color 180ms ease',
+                    }}
+                    onMouseEnter={(e) => {
+                      (e.currentTarget as HTMLElement).style.color = 'var(--parsed-teal)';
+                    }}
+                    onMouseLeave={(e) => {
+                      (e.currentTarget as HTMLElement).style.color = 'var(--muted)';
+                    }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true" style={{ opacity: 0.5, flexShrink: 0 }}>
+                      <path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Get in Touch */}
-          <div className="flex flex-col md:items-center">
-            <div className="flex flex-col items-start">
-              <h3
-                className="text-sm font-semibold mb-4 uppercase tracking-wider"
-                style={{ color: 'var(--ghost-white)', fontFamily: 'var(--font-mono)', letterSpacing: '0.12em' }}
-              >
-                Get in Touch
-              </h3>
-              <div className="flex flex-col gap-2 text-sm" style={{ color: 'var(--muted)' }}>
+          <div>
+            <h3
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.7rem',
+                fontWeight: 600,
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: 'var(--ghost-white)',
+                marginBottom: '1.1rem',
+              }}
+            >
+              Get in Touch
+            </h3>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              {emails.map(({ name, email, color }) => (
                 <a
-                  href="mailto:raj1511aryan@gmail.com"
-                  className="transition-colors hover:text-[var(--parsed-teal)] break-all"
-                  style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}
+                  key={email}
+                  href={`mailto:${email}`}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.6rem',
+                    textDecoration: 'none',
+                    transition: 'opacity 180ms ease',
+                  }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.opacity = '0.8'; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.opacity = '1'; }}
+                  aria-label={`Email ${name}: ${email}`}
                 >
-                  raj1511aryan@gmail.com
+                  {/* Color dot */}
+                  <span
+                    style={{
+                      width: '6px',
+                      height: '6px',
+                      borderRadius: '50%',
+                      background: color,
+                      flexShrink: 0,
+                      opacity: 0.85,
+                    }}
+                    aria-hidden="true"
+                  />
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.78rem',
+                      color: 'var(--muted)',
+                      wordBreak: 'break-all',
+                    }}
+                  >
+                    {email}
+                  </span>
                 </a>
-                <a
-                  href="mailto:yashgarg7302@gmail.com"
-                  className="transition-colors hover:text-[var(--parsed-teal)] break-all"
-                  style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}
-                >
-                  yashgarg7302@gmail.com
-                </a>
-                <a
-                  href="mailto:aditya.mehra.dummy@email.com"
-                  className="transition-colors hover:text-[var(--parsed-teal)] break-all"
-                  style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem' }}
-                >
-                  aditya.mehra.dummy@email.com
-                </a>
-              </div>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom bar */}
         <div
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t text-xs"
-          style={{ borderColor: 'rgba(42, 63, 95, 0.4)', color: 'var(--muted)' }}
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            gap: '0.75rem',
+            paddingTop: '1.5rem',
+            borderTop: '1px solid rgba(42, 63, 95, 0.4)',
+          }}
         >
-          <p style={{ fontFamily: 'var(--font-mono)' }}>
-            © {year} TrioForge. Built with Next.js + Framer Motion.
+          <p
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.75rem',
+              color: 'var(--muted)',
+              margin: 0,
+            }}
+          >
+            © {year} TrioForge — Full-Stack · ML · Real-Time
           </p>
           <p
-            className="text-center"
-            style={{ color: 'rgba(136, 153, 170, 0.6)' }}
+            style={{
+              fontFamily: 'var(--font-mono)',
+              fontSize: '0.72rem',
+              color: 'rgba(78, 205, 196, 0.55)',
+              margin: 0,
+            }}
           >
-            Documents in → Structured JSON out
+            docs in → structured JSON out
           </p>
         </div>
       </div>
+
+      {/* Responsive grid CSS */}
+      <style>{`
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        @media (min-width: 640px) {
+          .footer-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+        @media (min-width: 900px) {
+          .footer-grid {
+            grid-template-columns: 2fr 1fr 1.2fr;
+            gap: 3rem;
+          }
+        }
+      `}</style>
     </footer>
   );
 }
