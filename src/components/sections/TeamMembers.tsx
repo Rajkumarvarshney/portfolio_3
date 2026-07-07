@@ -42,6 +42,7 @@ function MemberCard({
   return (
     <motion.div
       ref={ref}
+      className="h-full"
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: prefersReducedMotion ? 0 : 0.6, delay: prefersReducedMotion ? 0 : index * 0.12, ease }}
@@ -443,7 +444,7 @@ export default function TeamMembers() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6" role="list" aria-label="Team members">
           {teamMembers.map((member, i) => (
-            <div key={member.id} role="listitem">
+            <div key={member.id} role="listitem" className="h-full">
               <MemberCard member={member} index={i} onOpen={setSelectedMember} />
             </div>
           ))}
