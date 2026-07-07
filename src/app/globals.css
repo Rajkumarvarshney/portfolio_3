@@ -33,6 +33,18 @@
   box-sizing: border-box;
 }
 
+/* Pointer cursor on all interactive elements */
+a,
+button,
+select,
+label[for],
+[role="button"],
+[role="tab"],
+[role="listitem"][tabindex],
+[tabindex="0"] {
+  cursor: pointer;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
