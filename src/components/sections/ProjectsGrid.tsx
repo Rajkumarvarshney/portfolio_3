@@ -10,7 +10,7 @@ const filters = [
   { id: 'all', label: 'All Projects' },
   { id: 'rajkumar', label: 'Rajkumar' },
   { id: 'yash', label: 'Yash' },
-  { id: 'aditya', label: 'Aditya' },
+  { id: 'kushagra', label: 'Kushagra' },
   { id: 'ml-ai', label: 'ML & AI' },
   { id: 'full-stack', label: 'Full-Stack' },
   { id: 'frontend', label: 'Frontend' },
@@ -140,7 +140,7 @@ export default function ProjectsGrid() {
 
   const filteredProjects = projects.filter((p) => {
     if (activeFilter === 'all') return true;
-    if (['rajkumar', 'yash', 'aditya'].includes(activeFilter)) {
+    if (['rajkumar', 'yash', 'kushagra'].includes(activeFilter)) {
       return p.teamMemberIds.includes(activeFilter);
     }
     return p.category.includes(activeFilter as 'ml-ai' | 'full-stack' | 'frontend');

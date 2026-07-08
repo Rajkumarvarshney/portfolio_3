@@ -17,14 +17,14 @@ const stackCategories = [
     label: 'Frontend',
     icon: '◻',
     color: '#7B8FF7',
-    items: ['React', 'Next.js', 'Tailwind CSS', 'Redux', 'Framer Motion', 'CodeMirror'],
+    items: ['React', 'Next.js', 'Angular', 'Tailwind CSS', 'Redux', 'Framer Motion', 'CodeMirror'],
   },
   {
     id: 'backend',
     label: 'Backend & APIs',
     icon: '⟳',
     color: 'var(--forge-amber)',
-    items: ['Node.js', 'Express.js', 'Socket.IO', 'REST APIs', 'GraphQL', 'Multer'],
+    items: ['Node.js', 'Express.js', 'Spring Boot', 'Spring Cloud', 'Spring Data JPA', 'Hibernate', 'REST APIs', 'Socket.IO', 'GraphQL'],
   },
   {
     id: 'data-ml',
@@ -38,7 +38,7 @@ const stackCategories = [
     label: 'Databases',
     icon: '▦',
     color: '#2ECC71',
-    items: ['MongoDB', 'Firebase', 'SQL'],
+    items: ['MongoDB', 'MySQL', 'Firebase', 'SQL'],
   },
   {
     id: 'tools',

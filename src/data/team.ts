@@ -91,46 +91,55 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    id: 'aditya',
-    name: 'Aditya Mehra',
-    role: 'Frontend Engineer & UI/UX Specialist',
-    tagline: 'Bridges the gap between Figma and production — building interfaces that are both beautiful and bulletproof.',
-    avatar: 'AM',
+    id: 'kushagra',
+    name: 'Kushagra Singhal',
+    role: 'Backend / Systems Engineer',
+    tagline: 'Result-driven software developer with 1+ years of experience building RESTful APIs, optimizing backend performance, and delivering scalable solutions with Spring Boot.',
+    avatar: 'KS',
     avatarColor: '#7B8FF7',
-    // ⚠️ PLACEHOLDER — replace with real details when available
     education: [
       {
-        degree: 'M.Tech CSE',
-        institution: 'Dr. B.R. Ambedkar NIT Jalandhar',
-        year: '2024–present',
+        degree: 'B.Tech Information Technology',
+        institution: 'Jaypee University of Information Technology',
+        year: '2020–2024',
       },
       {
-        degree: 'B.Tech CSE',
-        institution: 'Delhi Technological University',
-        year: '2020–2024',
-        cgpa: '8.4',
+        degree: 'Senior Secondary (CBSE)',
+        institution: 'Dayawati Modi Academy',
+        year: '2019–2020',
       },
     ],
     experience: [
       {
-        company: 'Pixel Nest Studios',
-        role: 'Frontend Intern',
-        period: 'May – Jul 2023',
+        company: 'Oodles Technologies',
+        role: 'Software Developer',
+        period: 'Jan 2026–Present',
         highlights: [
-          'Built responsive marketing sites and design-system components for client products',
-          'Translated Figma designs into pixel-perfect, accessible React components',
-          'Introduced component documentation practices adopted by the full team',
+          'Built Spring Boot RESTful APIs automating ticket assignment & complaints resolution',
+          'Designed and optimized MySQL schemas for users, tickets, and departments',
+          'Implemented JWT-based authentication & role-based access control via Spring Security',
+          'Collaborated cross-functionally on ticket workflow tracking and reporting dashboards',
+        ],
+      },
+      {
+        company: 'JIL Information Technology (Jaypee Group)',
+        role: 'Software Developer',
+        period: 'Aug 2024–Jul 2025',
+        highlights: [
+          'Developed UMS backend services & Angular frontends serving 10,000+ students and staff across 3 universities',
+          'Designed modular REST APIs for student records, faculty data, and course management using MVC architecture',
+          'Optimized database queries and schemas for high-volume operations',
         ],
       },
     ],
-    skills: ['TypeScript', 'Next.js', 'React', 'Tailwind CSS', 'Framer Motion', 'Figma', 'GraphQL', 'REST APIs'],
-    topSkills: ['Next.js / TypeScript', 'Figma → React', 'Framer Motion'],
-    projects: ['designsync', 'taskflow', 'weatherly'],
-    interests: ['Design Systems', 'Motion Design', 'Typography'],
+    skills: ['Java', 'HTML', 'CSS', 'JavaScript', 'SQL', 'Spring Boot', 'Spring Cloud', 'Spring Data JPA', 'Hibernate', 'Angular', 'MySQL', 'Git', 'GitHub', 'VS Code'],
+    topSkills: ['Spring Boot', 'Java', 'Angular'],
+    projects: ['ecommerce-platform', 'complaint-system', 'university-system'],
+    interests: ['Systems Design', 'LeetCode (100+ solved)', 'Open Source', 'Backend Architecture'],
     contact: {
-      email: 'aditya.mehra.dummy@email.com', // ⚠️ PLACEHOLDER
-      github: 'https://github.com/', // TODO: replace with real GitHub URL
-      linkedin: 'https://linkedin.com/in/', // TODO: replace with real LinkedIn URL
+      email: 'kushagrasinghal11@gmail.com',
+      github: 'https://github.com/kushagrasinghal11',
+      linkedin: 'https://linkedin.com/in/kushagrasinghal11',
     },
   },
 ];

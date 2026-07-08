@@ -40,10 +40,10 @@ const teamContacts = [
     color: '#FF9B3C',
   },
   {
-    name: 'Aditya Mehra',
-    role: 'Frontend / UI-UX',
-    email: 'aditya.mehra.dummy@email.com', // ⚠️ PLACEHOLDER
-    avatar: 'AM',
+    name: 'Kushagra Singhal',
+    role: 'Backend / Systems',
+    email: 'kushagrasinghal11@gmail.com',
+    avatar: 'KS',
     color: '#7B8FF7',
   },
 ];

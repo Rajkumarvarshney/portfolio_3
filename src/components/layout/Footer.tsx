@@ -129,7 +129,7 @@ export default function Footer() {
               {[
                 { name: 'Rajkumar', email: 'raj1511aryan@gmail.com', color: '#4ECDC4' },
                 { name: 'Yash', email: 'yashgarg7302@gmail.com', color: '#FF9B3C' },
-                { name: 'Aditya', email: 'aditya.mehra.dummy@email.com', color: '#7B8FF7' },
+                { name: 'Kushagra', email: 'kushagrasinghal11@gmail.com', color: '#7B8FF7' },
               ].map(({ name, email, color }) => (
                 <div key={email}>
                   <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color, marginBottom: '0.2rem', opacity: 0.9 }}>
