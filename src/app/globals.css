@@ -56,12 +56,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Offset anchor scroll position for fixed 64px navbar */
-  scroll-padding-top: 4.5rem;
+  scroll-padding-top: 4rem;
 }
 
 /* scrollIntoView() respects scroll-margin-top — prevents content hiding under fixed navbar */
 section[id] {
-  scroll-margin-top: 4.5rem;
+  scroll-margin-top: 4rem;
 }
 
 body {

@@ -187,7 +187,7 @@ export default function Hero() {
   const scrollToSection = (id: string) => {
     const el = document.querySelector(id);
     if (el) {
-      const navbarOffset = 80;
+      const navbarOffset = 64; // Exact height of the fixed navbar
       const elementPosition = el.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - navbarOffset;
 

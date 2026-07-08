@@ -39,7 +39,7 @@ export default function Navbar() {
     const scrollToSection = () => {
       const el = document.querySelector(href);
       if (el) {
-        const navbarOffset = 80; // 64px navbar + 16px padding
+        const navbarOffset = 64; // Exact height of the fixed navbar
         const elementPosition = el.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - navbarOffset;
 
