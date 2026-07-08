@@ -173,6 +173,13 @@ code, pre, .mono {
               transform var(--duration-normal) var(--ease-smooth);
 }
 
+/* Ensure all interactive/hoverable card-like components also show the pointer cursor */
+.card,
+blockquote,
+[style*="var(--structural-dark)"] {
+  cursor: pointer !important;
+}
+
 .card:hover {
   border-color: var(--parsed-teal);
   box-shadow: 0 0 30px rgba(78, 205, 196, 0.1), 0 8px 32px rgba(0, 0, 0, 0.4);
