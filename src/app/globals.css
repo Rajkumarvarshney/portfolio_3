@@ -73,12 +73,14 @@ body {
 }
 
 /* ─── Typography Scale ──────────────────────────────────────────────────────── */
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5,
+[style*="var(--font-display)"] {
   font-family: var(--font-display);
-  line-height: 1.2;
+  line-height: 1.45 !important;
   letter-spacing: -0.02em;
-  /* overflow:visible ensures descenders (g, p, y) are not clipped */
-  overflow: visible;
+  /* overflow:visible and padding-bottom ensure descenders (g, p, y, j) are not clipped */
+  overflow: visible !important;
+  padding-bottom: 0.12em !important;
 }
 
 code, pre, .mono {
