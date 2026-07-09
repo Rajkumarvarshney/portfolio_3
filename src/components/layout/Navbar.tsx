@@ -81,7 +81,7 @@ export default function Navbar() {
             <button
               onClick={() => handleNavClick('#hero')}
               className="flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--parsed-teal)] rounded-md"
-              aria-label="TrioForge home"
+              aria-label="Apex Devworks home"
             >
               <div
                 className="w-8 h-8 rounded-md flex items-center justify-center text-xs font-bold flex-shrink-0"
@@ -91,13 +91,13 @@ export default function Navbar() {
                   fontFamily: 'var(--font-mono)',
                 }}
               >
-                TF
+                AD
               </div>
               <span
                 className="text-lg font-bold"
                 style={{ fontFamily: 'var(--font-display)', color: 'var(--ghost-white)', lineHeight: 1.4, overflow: 'visible', paddingBottom: '0.1em' }}
               >
-                TrioForge
+                Apex Devworks
               </span>
             </button>
 

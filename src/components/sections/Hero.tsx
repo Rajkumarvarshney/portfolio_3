@@ -244,7 +244,7 @@ export default function Hero() {
           className="text-center text-xs sm:text-sm md:text-base max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed"
           style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)' }}
         >
-          TrioForge is a 3-person postgrad engineering team from NIT Jalandhar — 
+          Apex Devworks is a 3-person postgrad engineering team from NIT Jalandhar — 
           MERN stack, real-time systems, and ML-driven tooling. We turn messy requirements 
           into fast, structured software. Our flagship:{' '}
           <span style={{ color: 'var(--parsed-teal)' }}>

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'TrioForge — Full-Stack, ML & Real-Time Engineering Team',
+  title: 'Apex Devworks — Full-Stack, ML & Real-Time Engineering Team',
   description:
-    'TrioForge is a 3-person postgrad engineering team from NIT Jalandhar building full-stack apps, real-time systems, and ML-driven document tools. Our flagship product DocuFlow converts PDFs, PPTX, DOCX, and video files into structured JSON. Available for freelance projects.',
+    'Apex Devworks is a 3-person postgrad engineering team from NIT Jalandhar building full-stack apps, real-time systems, and ML-driven document tools. Our flagship product DocuFlow converts PDFs, PPTX, DOCX, and video files into structured JSON. Available for freelance projects.',
   keywords: [
     'freelance developers',
     'full-stack development',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'real-time systems',
   ],
   openGraph: {
-    title: 'TrioForge — Engineering Team',
+    title: 'Apex Devworks — Engineering Team',
     description: 'Full-stack apps, real-time systems, and ML-driven document tools.',
     type: 'website',
   },

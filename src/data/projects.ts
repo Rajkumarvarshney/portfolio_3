@@ -9,7 +9,7 @@ export const projects: Project[] = [
     title: 'DocuFlow',
     description: 'Universal document-to-structured-data converter. Feed it PDFs, PPTX, DOCX, or video — get clean, schema-controlled JSON.',
     longDescription:
-      'DocuFlow is TrioForge\'s core product. It ingests heterogeneous document formats and outputs clean, structured JSON that developers can immediately use in downstream pipelines. It handles OCR for scanned documents, video transcription with slide/scene extraction, batch processing, and provides an API for integration into your own toolchain.',
+      'DocuFlow is Apex Devworks\'s core product. It ingests heterogeneous document formats and outputs clean, structured JSON that developers can immediately use in downstream pipelines. It handles OCR for scanned documents, video transcription with slide/scene extraction, batch processing, and provides an API for integration into your own toolchain.',
     techStack: ['Next.js', 'Node.js', 'Python', 'OCR', 'Socket.IO', 'REST API', 'MongoDB', 'FFmpeg'],
     category: ['flagship', 'full-stack', 'ml-ai'],
     teamMemberIds: ['rajkumar', 'yash', 'kushagra'],
@@ -122,7 +122,7 @@ export const testimonials: Testimonial[] = [
   {
     id: 't1',
     quote:
-      'TrioForge delivered our document processing pipeline in three weeks. The JSON output schema exactly matched what we needed for our data warehouse ingestion. Exceptional engineers.',
+      'Apex Devworks delivered our document processing pipeline in three weeks. The JSON output schema exactly matched what we needed for our data warehouse ingestion. Exceptional engineers.',
     author: 'Sarah Mitchell',
     company: 'DataBridge Solutions',
     role: 'Head of Engineering',

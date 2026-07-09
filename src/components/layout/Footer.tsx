@@ -47,7 +47,7 @@ export default function Footer() {
                   color: 'var(--forge-black)', fontFamily: 'var(--font-mono)',
                 }}
               >
-                TF
+                AD
               </div>
               <span
                 style={{
@@ -55,7 +55,7 @@ export default function Footer() {
                   fontSize: '1.1rem', fontWeight: 700, lineHeight: 1.4, overflow: 'visible',
                 }}
               >
-                TrioForge
+                Apex Devworks
               </span>
             </div>
 
@@ -163,7 +163,7 @@ export default function Footer() {
           }}
         >
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--muted)', margin: 0 }}>
-            © {year} TrioForge. Built with Next.js + Framer Motion.
+            © {year} Apex Devworks. Built with Next.js + Framer Motion.
           </p>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'rgba(78,205,196,0.5)', margin: 0 }}>
             Documents in → Structured JSON out
